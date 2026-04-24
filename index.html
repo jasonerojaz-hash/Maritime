@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maritime Programs | Rosemont Hills Montessori College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="ha.png.jpg" alt="RHMC Logo" class="nav-logo" onerror="this.style.display='none'"> 
+                <span>Rosemont Hills Montessori College</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-overlay">
+            <div class="hero-content reveal">
+                <h3>New Offering for SY 2026 - 2027</h3>
+                <h1>Senior High School <br><span>Tech Pro Track</span></h1>
+                <p>Charting Your Future. Anchored in Excellence.</p>
+                <a href="#programs" class="btn">Explore Maritime Pathways</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <h2 class="section-title reveal">Maritime Career Exit Pathways</h2>
+        <div class="program-container">
+            
+            <div class="program-card engineering reveal">
+                <div class="card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Marine Engineering</h3>
+                <p>At the Support Level (MESL)</p>
+                <a href="https://en.wikipedia.org/wiki/Marine_engineering" target="_blank" class="learn-more-btn">Learn More</a>
+            </div>
+
+            <div class="program-card transportation reveal">
+                <div class="card-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <h3>Marine Transportation</h3>
+                <p>At the Support Level</p>
+                <a href="https://en.wikipedia.org/wiki/Maritime_transport" target="_blank" class="learn-more-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <div id="modal-eng" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-eng')">&times;</span>
+            <h2>Marine Engineering (MESL)</h2>
+            <hr>
+            <p>The Marine Engineering Support Level program at Rosemont Hills Montessori College prepares students for the technical and operational demands of ship machinery.</p>
+            <ul>
+                <li>Focus on Engine Room Operations</li>
+                <li>Maintenance of Maritime Systems</li>
+                <li>Pathway to Professional Sea-faring Careers</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-trans" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-trans')">&times;</span>
+            <h2>Marine Transportation</h2>
+            <hr>
+            <p>Our Marine Transportation program focuses on the navigation and safe operation of vessels at the support level.</p>
+            <ul>
+                <li>Navigation and Charting</li>
+                <li>Deck Operations and Safety</li>
+                <li>Bridge Resource Management</li>
+            </ul>
+        </div>
+    </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content reveal">
+            <p><i class="fas fa-phone"></i> (63-32) 517 - 3278 / (63-32) 407 - 1403 / (63-32) 868 - 7318</p>
+            <p>
+                <i class="fas fa-globe"></i> 
+                <a href="https://rosemonthills.com/" target="_blank" class="footer-link">www.rosemonthills.com</a>
+            </p>
+            <p>
+                <i class="fab fa-facebook"></i> 
+                <a href="https://www.facebook.com/rosemonthillsmontessori" target="_blank" class="footer-link">Rosemont Hills Montessori College</a>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Rosemont Hills Montessori College. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+</html>
